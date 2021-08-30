@@ -1,0 +1,257 @@
+
+/* Removing default margins and paddings and some other useful stuff. */
+
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Main hero section */
+
+.hero-section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--paleBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* z-index: -2; */
+}
+
+/* Wave svg */
+
+.hero-section::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 27.3125rem;
+  background: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  /* z-index: -1; */
+}
+
+/* The  order summary card */
+
+.hero-section .wrapper{
+  position: relative;
+  width: 20.75rem;
+  height: 33.375rem;
+  background-color: var(--veryPaleBlue);
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  border-radius: 1rem;
+  z-index: 10;
+  box-shadow: 1px 2px 16px 0 rgb(180, 185, 252);
+}
+
+/* Illustration image container */
+.hero-section .wrapper .illustration{
+  grid-row: 1/2;
+  position: relative;
+  width: 100%;
+
+}
+
+/*  Illustration image */
+
+.hero-section .wrapper .illustration img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem 1rem 0 0;
+} 
+
+/* Main content container */
+
+.hero-section .wrapper .main{
+  grid-row: 2/4;
+  padding: 1rem 2.1rem;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: .8rem;
+  font-weight: 900;
+}
+
+/* h1 tag styling  within main headings*/
+
+.hero-section .wrapper .main .headings h1{
+  color: #292929;
+  margin: 0 1rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+/* p tag styling within main headings*/
+
+.hero-section .wrapper .main .headings p{
+  margin: .8rem 0;
+  font-size: .7rem;
+  font-weight: 700;
+  line-height: 1.2rem;
+  color: rgba(0, 0, 0, 0.493);
+}
+
+/* The annual card price and change link card */
+
+.hero-section .wrapper .main .annual-card{
+  position: relative;
+  width: 100%;
+  height: 4.5rem;
+  border-radius: .6rem;
+  padding: 0 .6rem;
+  background-color: var(--paleBlue);
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  place-items: center;
+}
+
+/* Music Img container */
+
+.hero-section .wrapper .main .annual-card .music-img{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Music Image */
+
+.hero-section .wrapper .main .annual-card .music-img img{
+  border-radius: 50%;
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+/* Price Details */
+
+.hero-section .wrapper .main .annual-card .plan-detail-price{
+  grid-column: 2/4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: .2rem;
+}
+
+/* Plan name */
+
+.hero-section .wrapper .main .annual-card .plan-detail-price h3{
+  font-size: .7rem;
+  font-weight: 900;
+  color: #292929;
+}
+
+/* Plan Price */
+
+.hero-section .wrapper .main .annual-card .plan-detail-price span{
+  color: rgba(0, 0, 0, 0.493);
+  font-size: .7rem;
+  font-weight: 500;
+}
+
+/* Change link Container */
+
+.hero-section .wrapper .main .annual-card .link-change{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Change link */
+
+.hero-section .wrapper .main .annual-card  .link-change a{
+  font-size: .7rem;
+  transition: all 300ms ease-in-out;
+}
+
+/* a hover and active State */
+
+.hero-section .wrapper .main .annual-card  .link-change a:hover,
+.hero-section .wrapper .main .annual-card  .link-change a:active{
+  text-decoration: none;
+  color: var(--desaturatedBlue);
+}
+
+/* Payment anc cancel buttons container */
+
+.hero-section .wrapper .main .buttons{
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons */
+
+.hero-section .wrapper .main .buttons button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: .7rem;
+  font-weight: 700;
+  transition: all 300ms ease-in-out;
+}
+
+/* Button - 1 */
+
+.hero-section .wrapper .main .buttons button:nth-child(1){
+  width: 100%;
+  height: 2.3rem;
+  background-color: var(--brightBlue);
+  color: #fff;
+  border-radius: .4rem;
+  box-shadow: 0px 2px 12px 0 rgb(163, 169, 255);
+}
+
+/* button-1 hover and active State */
+
+.hero-section .wrapper .main .buttons button:nth-child(1):hover,
+  .hero-section .wrapper .main .buttons button:nth-child(1):active{
+  background-color: var(--desaturatedBlue);
+}
+
+/* Button - 2 */
+
+.hero-section .wrapper .main .buttons button:nth-child(2){
+  margin-top: .5rem;
+  background: inherit;
+  color: rgb(129, 129, 129);
+}
+
+/* button-2 hover and active State */
+
+.hero-section .wrapper .main .buttons button:nth-child(2):hover,
+.hero-section .wrapper .main .buttons button:nth-child(2):active{
+  color: #292929;
+}
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 375px) {
+.hero-section::before{
+  visibility: hidden;
+}
+.hero-section .wrapper{
+  margin: 0 1rem;
+}
+}
